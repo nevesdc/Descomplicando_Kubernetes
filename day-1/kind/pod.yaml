@@ -1,0 +1,17 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  creationTimestamp: null
+  labels:
+    run: nevesdc
+  name: nevesdc
+spec:
+  containers:
+  - image: nginx
+    name: nevesdc
+    ports:
+    - containerPort: 80
+    resources: {}
+  dnsPolicy: ClusterFirst
+  restartPolicy: Always
+status: {}
