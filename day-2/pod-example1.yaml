@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  labels:
+    run: neves01
+    service: webserver
+  name: neves01
+spec:
+  containers:
+  - image: nginx
+    name: neves01
+    resources: {}
+  dnsPolicy: ClusterFirst
+  restartPolicy: Always

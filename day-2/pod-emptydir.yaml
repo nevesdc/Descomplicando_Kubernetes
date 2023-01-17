@@ -1,0 +1,21 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  labels:
+    run: neves02
+    service: webserver
+  name: neves02
+spec:
+  containers:
+  - image: nginx
+    name: neves02
+    volumeMounts:
+    - mountPath: /neves02
+      name: primeiro-emptydir
+    resources: {}
+  dnsPolicy: ClusterFirst
+  restartPolicy: Always
+  volumes:
+  - name: primeiro-emptydir
+    emptyDir:
+      sizeLimit: 256Mi
